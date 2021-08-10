@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Bootstrap">
+    <meta name="generator" content="Hugo 0.83.1">
+    <title>Album example · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<!--    <link href="./assets/dist/css/custom.css" rel="stylesheet">-->
+
+    <style type="text/css">
+        .row {
+                margin-bottom:15px;
+                margin-top: 15px;
+            }
+    </style>
+  </head>
+  <body>
+
+<header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Follow on Twitter</a></li>
+            <li><a href="#" class="text-white">Like on Facebook</a></li>
+            <li><a href="#" class="text-white">Email me</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--  <div class="navbar navbar-dark bg-dark shadow-sm">-->
+<!--    <div class="container">-->
+<!--      <a href="#" class="navbar-brand d-flex align-items-center">-->
+<!--        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>-->
+<!--        <strong>Album</strong>-->
+<!--      </a>-->
+<!--      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--      </button>-->
+<!--    </div>-->
+<!--  </div>-->
+
+</header>
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+<!--        <h1 class="fw-light">Learning to Compose Visual Relations</h1>-->
+<!--        <hr>-->
+<!--        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>-->
+<!--        <p>-->
+<!--          <a href="#" class="btn btn-primary my-2">Paper</a>-->
+<!--          <a href="#" class="btn btn-primary my-2">Code(Coming soon)</a>-->
+<!--          <a href="#" class="btn btn-primary my-2">Data</a>-->
+<!--          <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
+<!--        </p>-->
+        <div class="jumbotron">
+          <h1 class="display-4">Learning to Compose Visual Relations</h1>
+<!--          <p class="lead">Learning to Compose Visual Relations</p>-->
+          <hr class="my-4">
+<!--          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>-->
+          <p class="lead">
+<!--            <a class="btn btn-primary btn-lg" href="#" role="button">Paper</a>-->
+<!--              <a class="btn btn-primary btn-lg" href="#" role="button">Code(Soon)</a>-->
+<!--              <a class="btn btn-primary btn-lg" href="#" role="button">Data</a>-->
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="text-align: left;">
+        <div class="mx-auto">
+            <ul class="list-inline">
+                <li class="list-inline-item">Reviewer 7kfr: </li>
+                <li class="list-inline-item"><a href="#block_dataset">Real World Block Image Generation</a></li>
+                <li class="list-inline-item"><a href="#vg_image_generation">Visual Genome Image Generaton</a></li>
+                <li class="list-inline-item"><a href="#similar_object_generation">Similar Objects Generation</a></li>
+                <li class="list-inline-item"><a href="#algorithms">Training/Sampling Algorithms Snippets</a></li>
+            </ul>
+        </div>
+        <div class="mx-auto">
+            <ul class="list-inline">
+                <li class="list-inline-item">Reviewer ubTt: </li>
+                <li class="list-inline-item"><a href="#block_dataset">Real World Block Image Generation</a></li>
+                <li class="list-inline-item"><a href="#vg_image_generation">Visual Genome Image Generaton</a></li>
+            </ul>
+        </div>
+        <div class="mx-auto">
+            <ul class="list-inline">
+                <li class="list-inline-item">Reviewer JivJ: </li>
+                <li class="list-inline-item"><a href="#block_dataset">Real World Block Image Generation</a></li>
+                <li class="list-inline-item"><a href="#vg_image_generation">Visual Genome Image Generaton</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr class="my-4">
+    <div class="container">
+        <br>
+        <div class="section" id="block_dataset">
+            <h2 class="text-left">(Reviewer 7kfr, ubTt, JivJ) Image Generation - Real World Block Dataset</h2>
+            <p class="text-left" style="text-align: left;">
+                Our proposed methods can be extended to real-world scenes. We used the real-world block dataset proposed in <a href="https://arxiv.org/pdf/1603.01312.pdf">https://arxiv.org/pdf/1603.01312.pdf</a>. We compare the image generation results of our proposed method, i.e. <b> Ours (Learned Embedding)</b> and <b>Ours (Sentence CLIP)</b>, and the best baseline, i.e. <b>StyleGAN2 (CLIP)</b> on this dataset.
+                The images are generated conditioned on a single relational description (1R), two relational descriptions (2R), and three relational descriptions (3R), respectively. Our approaches are able to generate images containing the mentioned object relations and outperform StyleGAN2 (CLIP).
+                <!-- <br>We ran all three settings <b>(1R, 2R and 3R)</b>, and we compared qualitative results from 
+                <b> Ours (Learned Embedding)</b>, <b>Ours (Sentence CLIP)</b> and <b>StyleGAN2 (CLIP)</b> <br>
+                Note that <b>"Sentence CLIP"</b> means using the CLIP's text encoder to encode the relational scene descriptions. -->
+            </p>
+            <hr class="my-4">
+            <div class="row justify-content-center">
+                <div class="col-sm">
+                    <h6 >Input Relational Scene Description (1R)</h6>
+                    <br>
+                    <div style="height:100px;">A red cube below a blue cube</div>
+                    <div style="height:100px;">A red cube above a blue cube</div>
+                    <div style="height:100px;">A yellow cube above a red cube</div>
+                    <div style="height:100px;">A red cube above a red cube</div>
+                    <div style="height:100px;">A red cube above a green cube</div>
+                </div>
+                <div class="col-sm">
+                    <h6>StyleGAN2 (CLIP)<br></h6>
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/1R/stylegan2_clip/000000.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/1R/stylegan2_clip/000001.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/1R/stylegan2_clip/000002.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/1R/stylegan2_clip/000003.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/1R/stylegan2_clip/000004.png">
+                </div>
+                <div class="col-sm">
+                    <h6>Ours (Sentence CLIP)<br></h6>
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/1R/ours_clip_sentence/000000.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/1R/ours_clip_sentence/000001.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/1R/ours_clip_sentence/000002.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/1R/ours_clip_sentence/000003.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/1R/ours_clip_sentence/000004.png">
+                </div>
+                <div class="col-sm">
+                    <h6>Ours (Learned Embedding)<br></h6>
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/1R/ours/000000.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/1R/ours/000001.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/1R/ours/000002.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/1R/ours/000003.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/1R/ours/000004.png">
+                </div>
+            </div>
+            <br>
+            <hr class="my-4">
+            <div class="row justify-content-center">
+                <div class="col-sm">
+                    <h6>Input Relational Scene Description (2R)</h6>
+                    <br>
+                    <div style="height:100px;">A red cube above a green cube <br> A yellow cube below a blue cube</div>
+                    <div style="height:100px;">A red cube above a blue cube  <br> A green cube above a yellow cube</div>
+                    <div style="height:100px;">A blue cube below a red cube  <br> A green cube below a red cube </div>
+                    <div style="height:100px;">A yellow cube below a green cube <br> A red cube above a green cube</div>
+                    <div style="height:100px;">A red cube above a yellow cube <br> A blue cube above a green cube</div>
+                </div>
+                <div class="col-sm">
+                    <h6>StyleGAN2 (CLIP)<br></h6>
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/2R/stylegan2_clip/000000.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/2R/stylegan2_clip/000001.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/2R/stylegan2_clip/000002.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/2R/stylegan2_clip/000003.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/2R/stylegan2_clip/000004.png">
+                </div>
+                <div class="col-sm">
+                    <h6>Ours (Sentence CLIP)<br></h6>
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/2R/ours_clip_sentence/000000.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/2R/ours_clip_sentence/000001.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/2R/ours_clip_sentence/000002.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/2R/ours_clip_sentence/000003.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/2R/ours_clip_sentence/000004.png">
+                </div>
+                <div class="col-sm">
+                    <h6>Ours (Learned Embedding)<br></h6>
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/2R/ours/000000.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/2R/ours/000001.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/2R/ours/000002.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/2R/ours/000003.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/2R/ours/000004.png">
+                </div>
+            </div>
+            <br>
+            <hr class="my-4">
+            <div class="row justify-content-center">
+                <div class="col-sm">
+                    <h6>Input Relational Scene Description (3R)</h6>
+                    <br>
+                    <div style="height:100px;">A yellow cube above a green cube <br> A green cube below a yellow cube <br> A yellow cube below a red cube</div>
+                    <div style="height:100px;">A green cube below a red cube <br> A blue cube below a yellow cube <br> A yellow cube below a red cube</div>
+                    <div style="height:100px;">A green cube below a red cube <br> A yellow cube above a green cube <br> A blue cube below a red cube</div>
+                    <div style="height:100px;">A red cube below a green cube <br> A blue cube above a yellow cube <br> A yellow cube below a red cube</div>
+                    <div style="height:100px;">A blue cube above a yellow cube <br> A green cube below a red cube <br> A yellow cube below a blue cube</div>
+                </div>
+                <div class="col-sm">
+                    <h6>StyleGAN2 (CLIP)<br></h6>
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/3R/stylegan2_clip/000000.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/3R/stylegan2_clip/000001.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/3R/stylegan2_clip/000002.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/3R/stylegan2_clip/000003.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/3R/stylegan2_clip/000004.png">
+                </div>
+                <div class="col-sm">
+                    <h6>Ours (Sentence CLIP)<br></h6>
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/3R/ours_clip_sentence/000000.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/3R/ours_clip_sentence/000001.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/3R/ours_clip_sentence/000002.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/3R/ours_clip_sentence/000003.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/3R/ours_clip_sentence/000004.png">
+                </div>
+                <div class="col-sm">
+                    <h6>Ours (Learned Embedding)<br></h6>
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/3R/ours/000000.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/3R/ours/000001.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/3R/ours/000002.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/3R/ours/000003.png">
+                    <br>
+                    <img style="height:100px;" src="./img/blocks/3R/ours/000004.png">
+                </div>
+            </div>
+            <hr class="my-4">
+        </div>
+        <br>
+        <div class="section">
+            <h2 class="text-center" id="vg_image_generation">(Reviewer 7kfr, ubTt, JivJ) Image Generation - Visual Genome</h2>
+            <p class="text-left" style="text-align: left;">
+                Our proposed methods can be extended to real-world scenes, such as visual genome. We train our model on a small subset of visual genome dataset by selecting the common relations and objects. We found that our proposed method with CLIP as the encoder, i.e. <b> Ours (Sentence CLIP) </b> performs better than our method with a learned embedding, i.e. <b>Ours (Learned Embedding)</b>.
+            </p>
+            <hr class="my-4">
+            <div class="row justify-content-center">
+                <div class="row">
+                    <div class="col-sm">
+                    <b>Input Relational Scene Description</b>
+                    </div>
+                    <div class="col-sm">
+                        Building next to sky
+                    </div>
+                    <div class="col-sm">
+                        Building in front of sky
+                    </div>
+                    <div class="col-sm">
+                        Grass underneath building
+                    </div>
+                    <div class="col-sm">
+                        Tree below building
+                    </div>
+                    <div class="col-sm">
+                        Grass to right of woman
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm">
+                        <b>Ours <br> (Learned Embedding)</b>
+                    </div>
+                    <div class="col-sm">
+                        <img style="height:100px;" src="./img/vg/ours_emb/0.png">
+                    </div>
+                    <div class="col-sm">
+                        <img style="height:100px;" src="./img/vg/ours_emb/1.png">
+                    </div>
+                    <div class="col-sm">
+                        <img style="height:100px;" src="./img/vg/ours_emb/2.png">
+                    </div>
+                    <div class="col-sm">
+                        <img style="height:100px;" src="./img/vg/ours_emb/3.png">
+                    </div>
+                    <div class="col-sm">
+                        <img style="height:100px;" src="./img/vg/ours_emb/4.png">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <b>Ours <br>(Sentence CLIP)</b>
+                    </div>
+                    <div class="col-sm">
+                        <img style="height:100px;" src="./img/vg/ours_clip_sentence/0.png">
+                    </div>
+                    <div class="col-sm">
+                        <img style="height:100px;" src="./img/vg/ours_clip_sentence/1.png">
+                    </div>
+                    <div class="col-sm">
+                        <img style="height:100px;" src="./img/vg/ours_clip_sentence/2.png">
+                    </div>
+                    <div class="col-sm">
+                        <img style="height:100px;" src="./img/vg/ours_clip_sentence/3.png">
+                    </div>
+                    <div class="col-sm">
+                        <img style="height:100px;" src="./img/vg/ours_clip_sentence/4.png">
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+        </div>
+        <br>
+        <div class="section">
+            <h2 class="text-center" id="similar_object_generation">(Reviewer 7kfr) Image Generation (Similar Objects) - CLEVR</h2>
+            <p class="text-left" style="text-align: left;">
+                We use <b>Ours (Learned Embedding)</b> to generate images given relational scene descriptions that only contain objects with the same attributes. Our model can generate multiple similar objects rather than one object, even if the relation descriptions do not mark the identities of these objects.
+                <!-- Our proposed method can generate multiple similar objects when the relational scene descriptions that only contain similar objects. <br> -->
+            </p>
+            <hr class="my-4">
+            <div class="row justify-content-center">
+                <div class="row">
+                    <div style="width: 100px;height:100px;" class="col-sm">
+                        <b> Input Relational Scene Description </b>
+                    </div>
+                    <div style="width: 160px;height:160px;" class="col-sm">
+                        A small metal cyan cube in front of a small metal cyan cub and,
+                         small metal cyan cube behind a small metal cyan cube
+                    </div>
+                    <div style="width:160px;height:160px;" class="col-sm">
+                        A small rubber gray cube left a small rubber gray cube, and
+                        a small rubber gray cube behind a small rubber gray cube
+                    </div>
+                    <div style="width:160px;height:160px;" class="col-sm">
+                        A small green metal cylinder below a small green metal cylinder, and 
+                        a small green metal cylinder on the right of a small green metal cylinder
+                    </div>
+                    <div style="width:160px;height:160px;" class="col-sm">
+                        A large metal green sphere above a large metal green sphere, and 
+                        a large metal green sphere on the left of a large metal green sphere
+                    </div>
+                    <div style="width:160px;height:160px;" class="col-sm">
+                        A small purple metal cylinder above a small purple metal cylinder, and
+                        a small purple metal cylinder below a small purple metal cylinder
+                    </div>
+                    <div style="width:160px;height:160px;" class="col-sm">
+                        A large red metal cube behind a large red metal cube, and 
+                        a large red metal cube above a large red metal cube
+                    </div>
+                    <div style="width:160px;height:160px;" class="col-sm">
+                        A small yellow metal cylinder behind a small yellow metal cylinder, and
+                        a small yellow metal cylinder above a small yellow metal cylinder
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm">
+                        <b> Ours <br> (Learned Embedding) </b>
+                    </div>
+                    <div class="col-sm">
+                        <img src="./img/clevr_similar_objects/cyan cube small metal_front_behind_cyan cube small metal.png">
+                    </div>
+                    <div class="col-sm">
+                        <img src="./img/clevr_similar_objects/gray cube small rubber_left_behind_gray cube small rubber.png">
+                    </div>
+                    <div class="col-sm">
+                        <img src="./img/clevr_similar_objects/green cylinder small metal_below_right_green cylinder small metal.png">
+                    </div>
+                    <div class="col-sm">
+                        <img src="./img/clevr_similar_objects/green sphere large metal_above_left_green sphere large metal.png">
+                    </div>
+                    <div class="col-sm">
+                        <img src="./img/clevr_similar_objects/purple cylinder small metal_above_below_purple cylinder small metal.png">
+                    </div>
+                    <div class="col-sm">
+                        <img src="./img/clevr_similar_objects/red cube large metal_behind_above_red cube large metal.png">
+                    </div>
+                    <div class="col-sm">
+                        <img src="./img/clevr_similar_objects/yellow cylinder small metal_behind_above_yellow cylinder small metal.png">
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+        </div>
+        <br>
+        <div class="section" id="algorithms">
+            <h2 class="text-center">(Reviewer 7kfr) Conditional EBM Algorithms</h2>
+            <p class="text-center">
+                Training and testing (image generation, image editing and image-to-text retrieval) algorithms of our proposed method</b>.
+            </p>
+            <hr class="my-4">
+            <div class="row justify-content-center">
+                <div class="row">
+                    <embed src="./algorithms/algorithms.pdf#toolbar=0" type="application/pdf" width="100%" height="600px" />
+                </div>
+                <br>
+            </div>
+        </div>
+        <br>
+    </div>
+    </section>
+</main>
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+<!--    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>-->
+<!--    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>-->
+  </div>
+</footer>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>
