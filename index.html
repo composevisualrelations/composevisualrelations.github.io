@@ -64,65 +64,24 @@
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-<!--        <h1 class="fw-light">Learning to Compose Visual Relations</h1>-->
-<!--        <hr>-->
-<!--        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>-->
-<!--        <p>-->
-<!--          <a href="#" class="btn btn-primary my-2">Paper</a>-->
-<!--          <a href="#" class="btn btn-primary my-2">Code(Coming soon)</a>-->
-<!--          <a href="#" class="btn btn-primary my-2">Data</a>-->
-<!--          <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
-<!--        </p>-->
         <div class="jumbotron">
           <h1 class="display-4">Learning to Compose Visual Relations</h1>
-<!--          <p class="lead">Learning to Compose Visual Relations</p>-->
           <hr class="my-4">
-<!--          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>-->
           <p class="lead">
-<!--            <a class="btn btn-primary btn-lg" href="#" role="button">Paper</a>-->
-<!--              <a class="btn btn-primary btn-lg" href="#" role="button">Code(Soon)</a>-->
-<!--              <a class="btn btn-primary btn-lg" href="#" role="button">Data</a>-->
+            <a class="btn btn-primary btn-lg" href="#" role="button">Paper (Coming soon)</a>
+              <a class="btn btn-primary btn-lg" href="#" role="button">Code (Coming soon)</a>
           </p>
         </div>
       </div>
     </div>
 
-    <div class="container" style="text-align: left;">
-        <div class="mx-auto">
-            <ul class="list-inline">
-                <li class="list-inline-item">Reviewer 7kfr: </li>
-                <li class="list-inline-item"><a href="#block_dataset">Real World Block Image Generation</a></li>
-                <li class="list-inline-item"><a href="#vg_image_generation">Visual Genome Image Generaton</a></li>
-                <li class="list-inline-item"><a href="#similar_object_generation">Similar Objects Generation</a></li>
-                <li class="list-inline-item"><a href="#algorithms">Training/Sampling Algorithms Snippets</a></li>
-            </ul>
-        </div>
-        <div class="mx-auto">
-            <ul class="list-inline">
-                <li class="list-inline-item">Reviewer ubTt: </li>
-                <li class="list-inline-item"><a href="#block_dataset">Real World Block Image Generation</a></li>
-                <li class="list-inline-item"><a href="#vg_image_generation">Visual Genome Image Generaton</a></li>
-            </ul>
-        </div>
-        <div class="mx-auto">
-            <ul class="list-inline">
-                <li class="list-inline-item">Reviewer JivJ: </li>
-                <li class="list-inline-item"><a href="#block_dataset">Real World Block Image Generation</a></li>
-                <li class="list-inline-item"><a href="#vg_image_generation">Visual Genome Image Generaton</a></li>
-            </ul>
-        </div>
-    </div>
-    <hr class="my-4">
     <div class="container">
         <br>
         <div class="section" id="block_dataset">
-            <h2 class="text-left">(Reviewer 7kfr, ubTt, JivJ) Image Generation - Real World Block Dataset</h2>
+            <h2 class="text-left">Image Generation - Real World Block Dataset</h2>
             <p class="text-left" style="text-align: left;">
                 Our proposed methods can be extended to real-world scenes. We used the real-world block dataset proposed in <a href="https://arxiv.org/pdf/1603.01312.pdf">https://arxiv.org/pdf/1603.01312.pdf</a>. We compare the image generation results of our proposed method, i.e. <b> Ours (Learned Embedding)</b> and <b>Ours (Sentence CLIP)</b>, and the best baseline, i.e. <b>StyleGAN2 (CLIP)</b> on this dataset.
                 The images are generated conditioned on a single relational description (1R), two relational descriptions (2R), and three relational descriptions (3R), respectively. Our approaches are able to generate images containing the mentioned object relations and outperform StyleGAN2 (CLIP).
-                <!-- <br>We ran all three settings <b>(1R, 2R and 3R)</b>, and we compared qualitative results from 
-                <b> Ours (Learned Embedding)</b>, <b>Ours (Sentence CLIP)</b> and <b>StyleGAN2 (CLIP)</b> <br>
-                Note that <b>"Sentence CLIP"</b> means using the CLIP's text encoder to encode the relational scene descriptions. -->
             </p>
             <hr class="my-4">
             <div class="row justify-content-center">
@@ -283,7 +242,7 @@
         </div>
         <br>
         <div class="section">
-            <h2 class="text-center" id="vg_image_generation">(Reviewer 7kfr, ubTt, JivJ) Image Generation - Visual Genome</h2>
+            <h2 class="text-center" id="vg_image_generation">Image Generation - Visual Genome</h2>
             <p class="text-left" style="text-align: left;">
                 Our proposed methods can be extended to real-world scenes, such as visual genome. We train our model on a small subset of visual genome dataset by selecting the common relations and objects. We found that our proposed method with CLIP as the encoder, i.e. <b> Ours (Sentence CLIP) </b> performs better than our method with a learned embedding, i.e. <b>Ours (Learned Embedding)</b>.
             </p>
@@ -355,7 +314,7 @@
         </div>
         <br>
         <div class="section">
-            <h2 class="text-center" id="similar_object_generation">(Reviewer 7kfr) Image Generation (Similar Objects) - CLEVR</h2>
+            <h2 class="text-center" id="similar_object_generation">Image Generation (Similar Objects) - CLEVR</h2>
             <p class="text-left" style="text-align: left;">
                 We use <b>Ours (Learned Embedding)</b> to generate images given relational scene descriptions that only contain objects with the same attributes. Our model can generate multiple similar objects rather than one object, even if the relation descriptions do not mark the identities of these objects.
                 <!-- Our proposed method can generate multiple similar objects when the relational scene descriptions that only contain similar objects. <br> -->
@@ -427,7 +386,7 @@
         </div>
         <br>
         <div class="section" id="algorithms">
-            <h2 class="text-center">(Reviewer 7kfr) Conditional EBM Algorithms</h2>
+            <h2 class="text-center">Conditional EBM Algorithms</h2>
             <p class="text-center">
                 Training and testing (image generation, image editing and image-to-text retrieval) algorithms of our proposed method</b>.
             </p>
