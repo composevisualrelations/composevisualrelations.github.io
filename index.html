@@ -72,6 +72,9 @@
                 <a class="nav-link" href="#Results">Results</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="#Algorithms">Algorithms</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#Model">Model</a>
             </li>
         </ul>
@@ -101,17 +104,17 @@
 <!-- Abstract -->
 <div class="container">
     <h3 id="Abstract" style="padding-top: 80px; margin-top: -80px;">Abstract</h3>
-    The visual world around us can be concisely described as a structured set of objects and their associated relations.
-    An image of a room may be conjured given only the description of the underlying objects and their associated
-    relations. While there has been significant work on designing deep neural networks which may compose individual
-    objects together, less work has been done on composing the individual relations between objects. A principal
-    difficulty is that while the placement of objects is mutually independent, their relations are entangled and
-    dependent on each other. To circumvent this issue, existing works primarily compose relations by utilizing a
-    holistic encoder, in the form of text or graph. In this work, we instead propose to represent each relation as an
-    unnormalized density (an energy-based model), enabling us to compose separate relations in a factorized manner. We
-    show that such a factorized decomposition allows more faithfully to both generate and edit scenes that have multiple
-    sets of relations. We further show that decomposition enables our model to effectively understand the underlying
-    relational scene structure.
+    The visual world around us can be described as a structured set of objects and their associated relations.
+    An image of a room may be conjured given only the description of the underlying objects and their associated relations.
+    While there has been significant work on designing deep neural networks which may compose individual objects together,
+    less work has been done on composing the individual relations between objects.
+    A principal difficulty is that while the placement of objects is mutually independent,
+    their relations are entangled and dependent on each other.
+    To circumvent this issue, existing works primarily compose relations by utilizing a holistic encoder, in the form of text or graphs.
+    In this work, we instead propose to represent each relation as an unnormalized density (an energy-based model),
+    enabling us to compose separate relations in a factorized manner.
+    We show that such a factorized decomposition allows the model to both generate and edit scenes that have multiple sets of relations more faithfully.
+    We further show that decomposition enables our model to effectively understand the underlying relational scene structure.
 </div>
 <br><br>
 
@@ -141,343 +144,147 @@
 </div>
 <br><br>
 
-<!--<div class="container">-->
-<!--    <h3 id="Results" style="padding-top: 80px; margin-top: -80px;">Results</h3><br>-->
-<!--    &lt;!&ndash;            image generation (block dataset)&ndash;&gt;-->
-<!--    <div class="section" id="block_dataset">-->
-<!--        <h4 class="text-left">Image Generation - Real World Block Dataset</h4>-->
-<!--        <p class="text-left" style="text-align: left;">-->
-<!--            Our proposed methods can be extended to real-world scenes. We used the real-world block dataset proposed in-->
-<!--            <a href="https://arxiv.org/pdf/1603.01312.pdf">https://arxiv.org/pdf/1603.01312.pdf</a>. We compare the-->
-<!--            image generation results of our proposed method, i.e. <b> Ours (Learned Embed)</b> and <b>Ours (Sentence-->
-<!--            CLIP)</b>, and the best baseline, i.e. <b>StyleGAN2 (CLIP)</b> on this dataset.-->
-<!--            The images are generated conditioned on a single relational description (1R), two relational descriptions-->
-<!--            (2R), and three relational descriptions (3R), respectively. Our approaches are able to generate images-->
-<!--            containing the mentioned object relations and outperform StyleGAN2 (CLIP).-->
-<!--        </p>-->
-<!--        <hr class="my-4">-->
-<!--        <div class="row justify-content-center text-center">-->
-<!--            <div class="col-sm-4 text-center">-->
-<!--                <h6>Input Relational Scene Description (1R)</h6>-->
-<!--                <br>-->
-<!--                <div style="height:100px;">A red cube below a blue cube</div>-->
-<!--                <div style="height:100px;">A red cube above a blue cube</div>-->
-<!--                <div style="height:100px;">A yellow cube above a red cube</div>-->
-<!--                <div style="height:100px;">A red cube above a red cube</div>-->
-<!--                <div style="height:100px;">A red cube above a green cube</div>-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <h6>StyleGAN2 (CLIP)<br></h6>-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/1R/stylegan2_clip/000000.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/1R/stylegan2_clip/000001.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/1R/stylegan2_clip/000002.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/1R/stylegan2_clip/000003.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/1R/stylegan2_clip/000004.png">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <h6>Ours (Sentence CLIP)<br></h6>-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/1R/ours_clip_sentence/000000.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/1R/ours_clip_sentence/000001.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/1R/ours_clip_sentence/000002.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/1R/ours_clip_sentence/000003.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/1R/ours_clip_sentence/000004.png">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <h6>Ours (Learned Embed)<br></h6>-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/1R/ours/000000.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/1R/ours/000001.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/1R/ours/000002.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/1R/ours/000003.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/1R/ours/000004.png">-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <br>-->
-<!--        <hr class="my-4">-->
-<!--        <div class="row justify-content-center text-center">-->
-<!--            <div class="col-sm-4">-->
-<!--                <h6>Input Relational Scene Description (2R)</h6>-->
-<!--                <br>-->
-<!--                <div style="height:100px;">A red cube above a green cube <br> A yellow cube below a blue cube</div>-->
-<!--                <div style="height:100px;">A red cube above a blue cube <br> A green cube above a yellow cube</div>-->
-<!--                <div style="height:100px;">A blue cube below a red cube <br> A green cube below a red cube</div>-->
-<!--                <div style="height:100px;">A yellow cube below a green cube <br> A red cube above a green cube</div>-->
-<!--                <div style="height:100px;">A red cube above a yellow cube <br> A blue cube above a green cube</div>-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <h6>StyleGAN2 (CLIP)<br></h6>-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/2R/stylegan2_clip/000000.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/2R/stylegan2_clip/000001.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/2R/stylegan2_clip/000002.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/2R/stylegan2_clip/000003.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/2R/stylegan2_clip/000004.png">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <h6>Ours (Sentence CLIP)<br></h6>-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/2R/ours_clip_sentence/000000.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/2R/ours_clip_sentence/000001.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/2R/ours_clip_sentence/000002.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/2R/ours_clip_sentence/000003.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/2R/ours_clip_sentence/000004.png">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <h6>Ours (Learned Embed)<br></h6>-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/2R/ours/000000.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/2R/ours/000001.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/2R/ours/000002.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/2R/ours/000003.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/2R/ours/000004.png">-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <br>-->
-<!--        <hr class="my-4">-->
-<!--        <div class="row justify-content-center text-center">-->
-<!--            <div class="col-sm-4">-->
-<!--                <h6>Input Relational Scene Description (3R)</h6>-->
-<!--                <br>-->
-<!--                <div style="height:100px;">A yellow cube above a green cube <br> A green cube below a yellow cube <br> A-->
-<!--                    yellow cube below a red cube-->
-<!--                </div>-->
-<!--                <div style="height:100px;">A green cube below a red cube <br> A blue cube below a yellow cube <br> A-->
-<!--                    yellow cube below a red cube-->
-<!--                </div>-->
-<!--                <div style="height:100px;">A green cube below a red cube <br> A yellow cube above a green cube <br> A-->
-<!--                    blue cube below a red cube-->
-<!--                </div>-->
-<!--                <div style="height:100px;">A red cube below a green cube <br> A blue cube above a yellow cube <br> A-->
-<!--                    yellow cube below a red cube-->
-<!--                </div>-->
-<!--                <div style="height:100px;">A blue cube above a yellow cube <br> A green cube below a red cube <br> A-->
-<!--                    yellow cube below a blue cube-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <h6>StyleGAN2 (CLIP)<br></h6>-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/3R/stylegan2_clip/000000.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/3R/stylegan2_clip/000001.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/3R/stylegan2_clip/000002.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/3R/stylegan2_clip/000003.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/3R/stylegan2_clip/000004.png">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <h6>Ours (Sentence CLIP)<br></h6>-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/3R/ours_clip_sentence/000000.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/3R/ours_clip_sentence/000001.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/3R/ours_clip_sentence/000002.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/3R/ours_clip_sentence/000003.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/3R/ours_clip_sentence/000004.png">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <h6>Ours (Learned Embed)<br></h6>-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/3R/ours/000000.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/3R/ours/000001.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/3R/ours/000002.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/3R/ours/000003.png">-->
-<!--                <br>-->
-<!--                <img style="height:100px;" src="./img/blocks/3R/ours/000004.png">-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <hr class="my-4">-->
+<div class="container">
+    <h3 id="Results" style="padding-top: 80px; margin-top: -80px;">Results</h3><br>
+    <div class="section">
+        <h4 class="text-center">Image Generation</h4>
+        <hr class="my-4">
+        <p>
+            Image generation results on the <b>CLEVR</b> dataset.
+            Image are generated based on <b>1 - 4</b> relational descriptions.
+            Note that the models are trained on a single relational description and the composed scene relations
+            <b>(2, 3, and 4 relational descriptions) are outside the training distribution</b>.
+        </p>
+        <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <img src="img/generation_clevr.png" class="img-fluid" alt="">
+            </div>
+        </div>
+        <hr class="my-4">
+        <p>
+            We further test on <b>iGibson</b> dataset. Below are generated iGibson images.
+            Note that <b>2 relational description is outside the training distribution</b>.
+        </p>
+        <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <img src="img/generation_igibson.png" class="img-fluid" alt="">
+            </div>
+        </div>
+        <hr class="my-4">
+        <p>
+            Lastly, we test on real-world blocks dataset from <a href="https://arxiv.org/pdf/1603.01312.pdf">https://arxiv.org/pdf/1603.01312.pdf</a>.
+        </p>
+        <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <img src="img/generation_block.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
 
-<!--    <div class="section">-->
-<!--        <h4 class="text-left" id="vg_image_generation">Image Generation - Visual Genome</h4>-->
-<!--        <p class="text-left" style="text-align: left;">-->
-<!--            Our proposed methods can be extended to real-world scenes, such as visual genome. We train our model on a-->
-<!--            small subset of visual genome dataset by selecting the common relations and objects. We found that our-->
-<!--            proposed method with CLIP as the encoder, i.e. <b> Ours (Sentence CLIP) </b> performs better than our method-->
-<!--            with a learned embedding, i.e. <b>Ours (Learned Embed)</b>.-->
-<!--        </p>-->
-<!--        <hr class="my-4">-->
-<!--        <div class="row justify-content-center text-center">-->
-<!--            <div class="col-sm">-->
-<!--                <b>Input Relational Scene Description </b>-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                Building next to sky-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                Building in front of sky-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                Grass underneath building-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                Tree below building-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                Grass to right of woman-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <br>-->
-<!--        <div class="row justify-content-center text-center">-->
-<!--            <div class="col-sm">-->
-<!--                <b>Ours <br> (Learned Embed)</b>-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <img style="height:100px;" src="./img/vg/ours_emb/0.png">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <img style="height:100px;" src="./img/vg/ours_emb/1.png">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <img style="height:100px;" src="./img/vg/ours_emb/2.png">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <img style="height:100px;" src="./img/vg/ours_emb/3.png">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <img style="height:100px;" src="./img/vg/ours_emb/4.png">-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <br>-->
-<!--        <div class="row justify-content-center text-center">-->
-<!--            <div class="col-sm">-->
-<!--                <b>Ours <br>(Sentence CLIP)</b>-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <img style="height:100px;" src="./img/vg/ours_clip_sentence/0.png" alt="">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <img style="height:100px;" src="./img/vg/ours_clip_sentence/1.png" alt="">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <img style="height:100px;" src="./img/vg/ours_clip_sentence/2.png" alt="">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <img style="height:100px;" src="./img/vg/ours_clip_sentence/3.png">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <img style="height:100px;" src="./img/vg/ours_clip_sentence/4.png">-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <hr class="my-4">-->
+    <div class="section">
+        <h4 class="text-center">Image Editing</h4>
+        <hr class="my-4">
+        <p> Given an input image, we can edit this image based on inverse relations (i.e., left to right).
+        </p>
+         <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <img src="img/editing_clevr.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
 
-<!--    &lt;!&ndash;        Similar objects in Clevr&ndash;&gt;-->
-<!--    <div class="section">-->
-<!--        <h4 class="text-left" id="similar_object_generation">Image Generation (Similar Objects) - CLEVR</h4>-->
-<!--        <p class="text-left" style="text-align: left;">-->
-<!--            We use <b>Ours (Learned Embed)</b> to generate images given relational scene descriptions that only-->
-<!--            contain objects with the same attributes. Our model can generate multiple similar objects rather than one-->
-<!--            object, even if the relation descriptions do not mark the identities of these objects.-->
-<!--            &lt;!&ndash; Our proposed method can generate multiple similar objects when the relational scene descriptions that only contain similar objects. <br> &ndash;&gt;-->
-<!--        </p>-->
-<!--        <hr class="my-4">-->
-<!--        <div class="row justify-content-center text-center">-->
-<!--            <div class="col-sm">-->
-<!--                <b> Input Relational Scene Description </b>-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                A small metal cyan cube in front of a small metal cyan cub and,-->
-<!--                small metal cyan cube behind a small metal cyan cube-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                A small rubber gray cube left a small rubber gray cube, and-->
-<!--                a small rubber gray cube behind a small rubber gray cube-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                A small green metal cylinder below a small green metal cylinder, and-->
-<!--                a small green metal cylinder on the right of a small green metal cylinder-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <br>-->
-<!--        <div class="row justify-content-center text-center">-->
-<!--            <div class="col-sm">-->
-<!--                <b> Ours (Learned Embed) </b>-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <img src="./img/clevr_similar_objects/cyan cube small metal_front_behind_cyan cube small metal.png"-->
-<!--                     alt="">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <img src="./img/clevr_similar_objects/gray cube small rubber_left_behind_gray cube small rubber.png"-->
-<!--                     alt="">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <img src="./img/clevr_similar_objects/green cylinder small metal_below_right_green cylinder small metal.png"-->
-<!--                     alt="">-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <br>-->
-<!--        <div class="row justify-content-center text-center">-->
-<!--            <div class="col-sm">-->
-<!--                <b> Input Relational Scene Description </b>-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                A small purple metal cylinder above a small purple metal cylinder, and-->
-<!--                a small purple metal cylinder below a small purple metal cylinder-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                A large red metal cube behind a large red metal cube, and-->
-<!--                a large red metal cube above a large red metal cube-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                A small yellow metal cylinder behind a small yellow metal cylinder, and-->
-<!--                a small yellow metal cylinder above a small yellow metal cylinder-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="row justify-content-center text-center">-->
-<!--            <div class="col-sm">-->
-<!--                <b> Ours (Learned Embed) </b>-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <img src="./img/clevr_similar_objects/purple cylinder small metal_above_below_purple cylinder small metal.png">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <img src="./img/clevr_similar_objects/red cube large metal_behind_above_red cube large metal.png">-->
-<!--            </div>-->
-<!--            <div class="col-sm">-->
-<!--                <img src="./img/clevr_similar_objects/yellow cylinder small metal_behind_above_yellow cylinder small metal.png">-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <hr class="my-4">-->
-<!--    </div>-->
-<!--</div>-->
-<!--<br><br><br>-->
+    <div class="section">
+        <h4 class="text-center">Image-text Retrieval</h4>
+        <hr class="my-4">
+        <p>We hypothesize the good generation performance of our proposed approach is due to our system's understanding of
+            relations and ability to distinguish between different relational scene descriptions.
+            In this section, we evaluate the relational understanding ability of our proposed method and baselines by comparing their image-to-text retrieval performance.
+        </p>
+         <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <img src="img/retrieval.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="section">
+        <h4 class="text-center">Generalization</h4>
+        <hr class="my-4">
+        <p>To quantitatively evaluate the generalization ability across datasets of the proposed method,
+            we test the <b>image-to-text retrieval</b> accuracy on the Blender dataset that contains 300 pairs of images and relational scene descriptions.
+        </p>
+         <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <img src="img/zero_shot_generalization.png" class="img-fluid" alt="" width="600" height="400">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="section">
+        <h4 class="text-center">Additional results</h4>
+        <hr class="my-4">
+        <p>We provide qualitative comparisons of different methods.
+            Firstly, we show a comprehensive comparison on <b>Clevr</b> dataset.
+        </p>
+         <div class="row align-items-center">
+             <div class="col justify-content-center text-center">
+                <img src="img/image_generation_clevr_2_appendix.png" class="img-fluid" alt="">
+            </div>
+        </div>
+
+        <hr class="my-4">
+        <p>Then below we show comparisons on <b>iGibson</b> dataset.
+        </p>
+        <div class="row align-items-center">
+             <div class="col justify-content-center text-center">
+                <img src="img/image_generation_igibson_2_appendix.png" class="img-fluid" alt="">
+            </div>
+        </div>
+
+        <hr class="my-4">
+        <p>Next, we investigate whether our approach <b>Ours (Learned Emb)</b> underperform in real scenes
+            since there will be more complex relations, attributes, and objects for real scenes. Firstly,
+            below we show image generation on real-world Blocks dataset. <b>Ours (Learned Emb)</b> still outperforms
+            the other two baselines.
+        </p>
+        <div class="row align-items-center">
+             <div class="col justify-content-center text-center">
+                <img src="img/image_generation_block_appendix.png" class="img-fluid" alt="">
+            </div>
+        </div>
+
+        <hr class="my-4">
+        <p>Lastly, we show comparisons on <b>Visual Genome</b> dataset. Note that we train our model using a small subset of Visual Genome dataset.
+            In this case, <b>EBM (CLIP) (Full Sentence)</b> performs better than our approach <b>Ours (Learned Emb)</b>
+            on generating more complex natural images because pretrained CLIP text encoder has seen large-scale image-text pairs
+            that cover a wide range of relations and objects.
+        </p>
+        <div class="row align-items-center">
+             <div class="col justify-content-center text-center">
+                <img src="img/image_generation_vg_appendix.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+
+<div class="container">
+    <h3 id="Algorithms" style="padding-top: 80px; margin-top: -80px;">Algorithms</h3>
+    <br>
+    <p>We provide the algorithms of the proposed method, including training, image generation, image editing, and image-to-text retrieval</p>
+  <img class="img-responsive img-rounded" src="img/algorithm_part_1.png" style="width:80%; height:100%" alt="">
+    <br><br><br>
+  <img class="img-responsive img-rounded" src="img/algorithm_part_2.png" style="width:80%; height:100%" alt="">
+</div><br>
+
 
 <!--  <div class="container">-->
 <!--        <h3 id="Model" style="padding-top: 80px; margin-top: -80px;">Model Overview</h3>-->
