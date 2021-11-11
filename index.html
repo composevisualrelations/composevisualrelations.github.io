@@ -107,9 +107,6 @@
         <h2 class="text-center" align="center">
             <p>Learning to Compose Visual Relations</p>
         </h2>
-        <!-- <h3 class="text-center"> -->
-            <!-- <p style="color: #EB6D18">NeurIPS 2021 (Spotlight)</p> -->
-        <!-- </h3> -->
         <p style="color: #EB6D18"><b>NeurIPS 2021 (Spotlight)</b></p>
         <a href="https://nanliu.io/">Nan Liu</a><sup>1*</sup> &nbsp;
         <a href="https://people.csail.mit.edu/lishuang/">Shuang Li</a><sup>2*</sup> &nbsp;
@@ -122,15 +119,25 @@
         <!-- <small>(* indicate equal contribution)</small> -->
         <a href="https://eecs.engin.umich.edu/"><b>University of Michigan</b></a>&nbsp;&nbsp;&nbsp;
         <a href="https://www.csail.mit.edu/"><b>MIT CSAIL</b></a><br>
-        
-
     </div>
 </div>
 <br>
+<br>
+<br>
 
+<div class="container">
+    <h3 id="Model" style="padding-top: 80px; margin-top: -80px;"></h3>
+    <div class="row align-items-center">
+        <div class="col justify-content-center text-center">
+            <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
+                <source src="img/clevr_teaser.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <hr class="my-4">
+</div>
+<br>
 
-
-<br><br>
 <div class="container">
     <!-- <h3 id="Images" style="padding-top: 80px; margin-top: -80px;">Demo</h3><br> -->
     <div class="section" style="text-align: center">
@@ -193,7 +200,7 @@
             <b>Learning to Compose Visual Relations</b><br>
 
             <b>NeurIPS 2021 (Spotlight)</b>
-            <a href="#" target="_blank">[Code]</a>
+            <a href="https://github.com/nanlliu/compose-visual-relations" target="_blank">[Code]</a>
             <a href="#">[Paper]</a>
             <a href="#" target="_blank">[BibTex][Coming soon]</a><br>
             <!--            Abridged in <b>NeurIPS 2021</b> workshop on Visual Learning and Reasoning for Robotics <a href="https://rssvlrr.github.io/">[Link]</a><br>-->
@@ -207,23 +214,23 @@
 
 
 
-<div class="container">
-    <h3 id="Model" style="padding-top: 80px; margin-top: -80px;">Model Overview</h3>
-    <div class="row align-items-center">
-        <div class="col justify-content-center text-center">
-            <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
-                <source src="img/model.mp4" type="video/mp4">
-            </video>
-        </div>
-    </div>
-    <hr class="my-4">
-</div>
-<br>
+<!--<div class="container">-->
+<!--    <h3 id="Model" style="padding-top: 80px; margin-top: -80px;">Model Overview</h3>-->
+<!--    <div class="row align-items-center">-->
+<!--        <div class="col justify-content-center text-center">-->
+<!--            <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">-->
+<!--                <source src="img/model.mp4" type="video/mp4">-->
+<!--            </video>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <hr class="my-4">-->
+<!--</div>-->
+<!--<br>-->
 
 
 
 <div class="container">
-    <!-- <h3 id="Results" style="padding-top: 80px; margin-top: -80px;">Results</h3><br> -->
+     <h3 id="Results" style="padding-top: 80px; margin-top: -80px;">Results</h3><br>
     <div class="section">
         <h4 class="text-center">Image Generation Results</h4>
         <hr class="my-4">
@@ -306,53 +313,129 @@
     </div>
     <br>
     <br>
-    
 
     <div class="section">
-        <h4 class="text-center">Additional results</h4>
-        <hr class="my-4">
-        <p>We provide qualitative comparisons of different methods.
-            Firstly, we show a comprehensive comparison on <b>Clevr</b> dataset.
-        </p>
-         <div class="row align-items-center">
-             <div class="col justify-content-center text-center">
-                <img src="img/image_generation_clevr_2_appendix.png" class="img-fluid" alt="" style="width:90%; height:100%">
-            </div>
-        </div>
+            <h3>Related Projects</h3>
+            <hr>
+            <p>
+                Check out our related projects on compositional energy functions! <br>
+            </p>
 
-        <hr class="my-4">
-        <p>Then below we show comparisons on <b>iGibson</b> dataset.
-        </p>
-        <div class="row align-items-center">
-             <div class="col justify-content-center text-center">
-                <img src="img/image_generation_igibson_2_appendix.png" class="img-fluid" alt="" style="width:90%; height:100%">
-            </div>
-        </div>
+            <div class="row vspace-top">
+                <div class="col-sm-3">
+                    <img src="img/posited_factors_global.png" class="img-fluid">
+                </div>
 
-        <hr class="my-4">
-        <p>Next, we investigate whether our approach <b>Ours (Learned Emb)</b> underperform in real scenes
-            since there will be more complex relations, attributes, and objects for real scenes.
-            Below, we show image generation on real-world Blocks dataset. <b>Ours (Learned Emb)</b> still outperforms
-            the other two baselines.
-        </p>
-        <div class="row align-items-center">
-             <div class="col justify-content-center text-center">
-                <img src="img/image_generation_block_appendix.png" class="img-fluid" alt="" style="width:90%; height:100%">
+                <div class="col">
+                    <div class="paper-title">
+                        <a href="https://energy-based-model.github.io/comet/">Unsupervised Learning of Compositional Energy Concepts</a>
+                    </div>
+                    <div>
+                       We show COMET provides a unified framework enabling us to decompose images into both global factors
+                        of variation as well as local factors of variation. Second, we show that COMET enables us to
+                        scale to more realistic datasets than previous work. Finally, we show that components obtained by
+                        COMET generalize well, and are amenable to compositions across different modes of data, and with
+                        components discovered by other instances of COMET.
+                    </div>
+                </div>
             </div>
+
+            <div class="row vspace-top">
+                <div class="col-sm-3">
+                    <img src="img/comp_cartoon.png" class="img-fluid">
+                </div>
+
+                <div class="col">
+                    <div class="paper-title">
+                        <a href="https://energy-based-model.github.io/compositional-generation-inference/">Compositional Visual Generation with Energy Based Models</a>
+                    </div>
+                    <div>
+                        We show how EBMs enable <b>zero-shot compositional</b> visual generation, enabling us to compose visual concepts
+                        (through operators of conjunction, disjunction, or negation) together in a zero-shot manner.
+                        Our approach enables us to generate faces given a  description
+                        ((Smiling AND Female) OR (NOT Smiling AND Male)) or to combine several different objects together.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row vspace-top">
+                <div class="col-sm-3">
+                    <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
+                        <source src="img/uncond_gen_half.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="col">
+                    <div class="paper-title">
+                        <a href="https://arxiv.org/abs/2012.01316">Improved Contrastive Divergence Training of Energy Based Models</a>
+                    </div>
+                    <div>
+                        We show that the traditional contrastive divergence training objective used to train EBMs
+                        is omits a important gradient term. We propose a loss to represent this missing gradient
+                        and propose additional tricks to improve EBM training. We show that our resultant models
+                        are able to generate high resolutions images and are further able to compose with each
+                        other.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row vspace-top">
+                <div class="col-sm-3">
+                    <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
+                        <source src="img/half.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="col">
+                    <div class="paper-title">
+                        <a href="https://openai.com/blog/energy-based-models/">Implicit Generation and Generalization with Energy Based Models</a>
+
+                    </div>
+                    <div>
+                        We introduce a method to scale EBM training to modern neural network architectures.
+                        We show that such trained EBMs have a set of unique properties, enabling model robustness,
+                        image and trajectory modeling, continual learning and compositional visual generation.
+                    </div>
+                </div>
+            </div>
+
+<!--            <div class="section">-->
+<!--                <h2>Paper</h2>-->
+<!--                <hr>-->
+<!--                <div>-->
+<!--                    <div class="list-group">-->
+<!--                        <a href="" class="list-group-item">-->
+<!--                            <img src="img/paper_thumbnail.png" style="width:100%; margin-right:-20px; margin-top:-10px;">-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="section">-->
+<!--                <h2>Bibtex</h2>-->
+<!--                <hr>-->
+<!--                <div class="bibtexsection">-->
+<!--                    @inproceedings{du2021comet,-->
+<!--                      title={Unsupervised Learning of Compositional Energy Concepts},-->
+<!--                      author={Du, Yilun and Li, Shuang and Sharma, Yash and Tenenbaum, B. Joshua-->
+<!--                      and Mordatch, Igor},-->
+<!--                      booktitle={Advances in Neural Information Processing Systems},-->
+<!--                      year={2021}-->
+<!--                    }-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <hr>
+            <footer>
+                <p>Send feedback and questions to any of
+                    <a href="https://nanliu.io">Nan Liu</a>,
+                    <a href="https://people.csail.mit.edu/lishuang/">Shuang Li</a>, and
+                    <a href="https://yilundu.github.io/">Yilun Du</a>.
+                </p>
+            </footer>
         </div>
-    </div>
 </div>
 <br><br>
-
-
-<div class="container">
-    <hr>
-    <center>
-        <footer>
-            <p>&copy; Massachusetts Institute of Technology 2021</p>
-        </footer>
-    </center>
-</div>
 
 <!-- Bootstrap core JavaScript -->
 <!-- Placed at the end of the document so the pages load faster -->
