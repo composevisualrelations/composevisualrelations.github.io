@@ -62,15 +62,12 @@
             background-repeat: repeat-x;
             background-size: 1px 1px;
             background-position: 0 85%;
-            border: 1px solid #999;
-            color: cornflowerblue;
-            background-color: #eee;
-            border-radius: 5px;
-            box-shadow: 4px 4px #ccc;
-            /*border: none;*/
+            border: none;
+            outline: none;
             scroll-behavior: smooth;
-            /*border-bottom:solid 1px #000;*/
-            width:auto
+            border-bottom:solid 1px #000;
+            width:auto;
+            font-weight: bolder;
         }
         .dropselect option {
           color: initial; /* fix Windows bug */
@@ -153,7 +150,7 @@
             <div class="section">
                 <div class="section" style="text-align: center">
                     <span><strong>Text Prompt: </strong></span><br>
-                    <span style="color: #AAAAAA"><strong>A small gray rubber cube</strong></span>
+                    <span>A small gray rubber cube</span>
                     <label for="clevr_rel">
                         <select id='clevr_rel' class="dropselect" style="text-align: center" name="clevr_generation_1" onchange="setImageClevr(this);">
                             <option value="img/clevr_generation_1_relation/a small gray rubber cube to the left of a small purple metal cube.png">to the left of</option>
@@ -164,7 +161,7 @@
                             <option value="img/clevr_generation_1_relation/a small gray rubber cube behind a small purple metal cube.png">behind</option>
                         </select>
                     </label>
-                    <span style="color: #B10DC9"><strong>a small purple metal cube</strong></span>
+                    <span>a small purple metal cube</span>
                 </div>
                 <div class="row align-items-center">
                     <div class="col justify-content-center text-center">
@@ -178,7 +175,7 @@
             <div class="section">
                 <div class="section" style="text-align: center">
                     <span><strong>Text Prompt: </strong></span><br>
-                    <span style="color: #CD853F"><strong>A maple wood cabinet</strong></span>
+                    <span>A maple wood cabinet</span>
                     <label for="igibson_rel">
                         <select id='igibson_rel' class="dropselect" style="text-align: center" name="igibson_generation_1" onchange="setImageiGibson(this);">
                             <option value="img/igibson_generation_1_relation/cabinet left couch.png">to the left of</option>
@@ -187,7 +184,7 @@
                             <option value="img/igibson_generation_1_relation/cabinet behind couch.png">behind</option>
                         </select>
                     </label>
-                    <span style="color: #6495ED"><strong>a blue fabric couch</strong></span>
+                    <span>a blue fabric couch</span>
                 </div>
                  <div class="row align-items-center">
                     <div class="col justify-content-center text-center">
