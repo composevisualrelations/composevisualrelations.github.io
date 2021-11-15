@@ -149,16 +149,19 @@
     <h3 id="home" style="padding-top: 80px; margin-top: -80px;"></h3>
     <div class="row align-items-center">
         <div class="col justify-content-center text-center">
-            <video width="90%" playsinline="" autoplay="" loop="" preload="" muted="">
+            <video width="85%" playsinline="" autoplay="" loop="" preload="" muted="">
                 <source src="img/clevr_teaser.mp4" type="video/mp4">
             </video>
         </div>
     </div>
     <hr class="my-4">
 </div>
-<br>
+<!-- <br> -->
 
+<!-- <h3 id="interactive_demo" style="padding-top: 80px; margin-top: -80px; text-align: center;">Interactive Demo</h3> -->
 <div class="container">
+    <h3 id="interactive_demo" style="padding-top: 80px; margin-top: -80px;">Interactive Demo</h3>
+    <br>
     <div class="row">
         <div class="col">
             <div class="section">
@@ -277,8 +280,7 @@
         <p>
             Image generation results on the <b>CLEVR</b> dataset.
             Image are generated based on <b>1 - 4</b> relational descriptions.
-            Note that the models are trained on a single relational description and the composed scene relations
-            <b>(2, 3, and 4 relational descriptions) are outside the training distribution</b>.
+            Note that the models are trained on a single relational description and <b>the composed scene relations (2, 3, and 4 relational descriptions) are outside the training distribution</b>.
         </p>
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
@@ -287,8 +289,8 @@
         </div>
         <hr class="my-4">
         <p>
-            We further test on <b>iGibson</b> dataset. Below are generated iGibson images.
-            Note that <b>2 relational description is outside the training distribution</b>.
+            Image generation results on the <b>iGibson</b> dataset. Below are generated iGibson images.
+            Note that the models are trained on a single relational description and <b>the composed scene relations (2 relational descriptions) are outside the training distribution</b>.
         </p>
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
@@ -297,7 +299,8 @@
         </div>
         <hr class="my-4">
         <p>
-            Lastly, we test on real-world blocks dataset from <a href="https://arxiv.org/pdf/1603.01312.pdf">https://arxiv.org/pdf/1603.01312.pdf</a>.
+            Image generation results on the <a href="https://arxiv.org/pdf/1603.01312.pdf"><b>real world Blocks dataset</b></a>. 
+            Note that the models are trained on a single relational description and <b>the composed scene relations (2 and 3 relational descriptions) are outside the training distribution</b>.
         </p>
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
